@@ -38,7 +38,7 @@ window.onload = function(){
 socket.on('playerMove',function(data){
 	let buli = true;
 	for (let index of myGamePiece){
-		if (index.id==data.id){
+		if (index.id==data.id && data.id!=id){
 			index.x = data.x;
 			index.y = data.y;
 			index.speedX = data.speedX;
